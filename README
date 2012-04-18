@@ -1,16 +1,16 @@
-A Shopp payment gateway that automatically converts your Google Ckeckout transactions into your home currency.
+A Shopp payment gateway that automatically converts your Google Checkout transactions into your home currency.
 
 Google Checkout/Google Wallet has the braindead policy that you can only charge in your home currency. 
 No luck for you if you're in the UK and want to sell in USD etc. This gateway is a subclass of the standard 
 Google Checkout module, with one small difference. When the user checks-out, it pulls the latest exchange rates 
-from Google and converts everything in the cart to your hopme currency.
+from Google and converts everything in the cart to your home currency.
 
 Caveats: this won't work for stuff like recurring subscriptions, but you probably don't want to use it for that 
 anyway, as the rates will change. Also you should display something to your customers to explain what's going on,
 and that the amount they are charge may be slightly different.
 
 To use: move GoogleCheckoutAutoConvert.php into your plugins/shopp/gateways/GoogleCheckout directory. Go into your
-Shopp admin and add a new payment method, using Google Checkout Auto Convert as the type. Set your home currency
+Shopp admin and add a new payment method, using Google Checkout Auto Convert as the processor. Set your home currency
 and you're away. Aside from that, setup is just the same as the normal Google Checkout gateway.
 
 Don't try to run this at the same time as the normal Google Checkout gateway, or strange things may happen.
